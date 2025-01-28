@@ -1,0 +1,691 @@
+html {
+    scroll-padding-top: 100px;
+  }
+  body {
+      font-family: Arial, sans-serif;
+  }
+  .navbar-nav .nav-link {
+      font-weight: bold;
+      transition: color 0.3s ease;
+      color: #ccc;
+  }
+  .navbar-nav .nav-link:hover {
+      text-decoration: none;
+      background-color: #f15b2a;
+      border-radius: 15px;
+  }
+  ul li {
+      margin-right: 50px;
+  }
+  #navbarNav .nav-item {
+      display: flex;
+      justify-content: center;
+  }
+  header {
+      font-size: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+  }
+  .hero {
+    padding: 100px 0;
+}
+.hero .display-4 {
+    font-family: stencil;
+    font-weight: bold;
+    color: #ffffff;
+    padding-top: 30px;
+}
+.hero .year {
+    font-size: 50px;
+    font-weight: bold;
+    color: #f988e0;
+}
+.hero .btn-primary {
+    font-weight: bold;
+    background-color: #f15b2a;
+    border: none;
+}
+.hero .btn-primary:hover{
+    color: #f15b2a;
+    background-color: #ffffff;
+}
+.about {
+    padding: 50px 20px;
+}
+.bg {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+p {
+    line-height: 1.8;
+    color: #d1d1d1;
+}
+#about {
+    background-color: rgba(247, 45, 170, 0.526);
+    color: rgb(78, 245, 78);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+    border-radius: 40px;
+}
+#schedule {
+    background-color: #8FA28D;
+    font-family: Arial, sans-serif;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.schedule-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0 0 20px;
+    color: #333;
+}
+.schedule-card {
+    background-color: #fffbfb;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+}
+.schedule-card:hover {
+    box-shadow: 25px 25px 12px rgba(0, 0, 0, 0.404);
+}
+.schedule-card h5 {
+    color: #333;
+}
+.schedule-card strong{
+    color: #613d3d;
+}
+.schedule-card strong:hover{
+    text-decoration: none;
+    color: #610353ef;
+}
+.schedule-item {
+    font-size: 1rem;
+    color: #555;
+}
+/* Contact Section */
+#contact {
+    background-color: #1f2b3a;
+    color: #ffffff;
+    padding: 50px 0;
+}
+#contact h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+#contact h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#contact p {
+    font-size: 1rem;
+    margin: 0;
+}
+footer {
+    background-color: #111;
+    color: #ccc;
+    padding: 20px 0;
+}
+footer p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+footer .social-icons a {
+    font-size: 1.2rem;
+    color: #ccc;
+    transition: color 0.3s ease;
+    margin-right: 10px;
+}
+footer .social-icons a:hover {
+    color: #f15b2a;
+}
+
+#register {
+    border-radius: 15px;
+    width: 150px;
+}
+#SvitLogoBg {
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+}
+
+#SvitLogoBg img {
+width: 100%;
+max-width: 900px; /* Keep the logo from getting too large */
+height: auto;
+}
+
+@media (max-width: 767px) {
+#SvitLogoBg {
+padding: 10px;
+margin-top: 10px;
+}
+
+#SvitLogoBg img {
+max-width: 80%; /* Reduce size for smaller screens */
+margin: 0 auto;
+}
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 767px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-nav .nav-item {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    #navbarNav .navbar-toggler {
+        border-color: #f15b2a;
+    }
+    .hero .display-4 {
+        font-size: 36px;
+        padding-top: 20px;
+    }
+    .hero .year {
+        font-size: 30px;
+    }
+    #about, #schedule, #contact {
+        padding: 30px 15px;
+    }
+    .schedule-card {
+        width: 100%;
+    }
+    footer .social-icons a {
+        font-size: 1.5rem;
+        margin-right: 15px;
+    }
+}
+.container {
+    text-align: center;
+  }
+  
+  .schedule-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .schedule-card {
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .schedule-item {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  .clickable-word {
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .clickable-word:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+/* Popup Styles */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    z-index: 1000;
+  }
+  
+  .popup.hidden {
+    display: none;
+  }
+  
+  .popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .popup-image img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .popup-text {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .popup-text h2 {
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+  }
+  
+  .popup-text button {
+    font-weight: bold;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .popup-text button:hover {
+    color: #ffffff;
+    background-color: #610353ef;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    color: Red;
+  }  
+
+  /* General Footer Styling */
+.footer {
+    background-color: #363636;    /* Dark background color for footer */
+    color: #000000;                /* Light text color */
+    padding: 40px 0;               /* Vertical padding for footer */
+    text-align: center;            /* Center-align the content */
+}
+
+/* Footer Text Styling */
+.footer-text {
+    font-size: 1rem;               /* Font size for the footer text */
+    margin-bottom: 20px;           /* Add space below the paragraph */
+    line-height: 1.5;              /* Increase line height for better readability */
+}
+
+/* Social Icons Container */
+.social-icons {
+    display: flex;                 /* Flex layout for icons */
+    justify-content: center;       /* Center-align the icons horizontally */
+    gap: 20px;                     /* Space between the icons */
+}
+
+/* Individual Icon Styling */
+.social-icon {
+    font-size: 2rem;  
+    font-weight: bold;             /* Icon size */
+    color: #f4f4f4;                /* Default color for icons */
+    text-decoration: none;         /* Remove underline from links */
+    padding: 5px 5px;                 /* Add padding around icons */
+    border: 2px solid transparent; /* Transparent border for initial state */
+    border-radius: 8px;            /* Slight rounded corners for square border */
+    transition: all 0.3s ease;     /* Smooth transition for hover effects */
+    display: inline-block;         /* Ensure icons remain inline with the text */
+}
+
+/* Hover Effect for Icons */
+.social-icon.social-icon.facebook:hover {
+    color: #3b5998;                /* Change icon color to white on hover */
+    background-color: #000000;     /* Facebook - blue background on hover */
+    transform: scale(1.1);          /* Slight zoom effect on hover */
+}
+
+/* Specific Icon Colors */
+.social-icon.facebook {
+    color: #3b5998;                /* Facebook icon color */
+}
+
+.social-icon.instagram {
+    color: #e4405f;                /* Instagram icon color */
+}
+
+.social-icon.wikipedia {
+    color: #000000;                /* Wikipedia icon color */
+}
+
+/* Hover Colors for Other Icons */
+
+.social-icon.instagram:hover {
+    background-color: #000000;     /* Instagram - pink background on hover */
+}
+
+.social-icon.wikipedia:hover {
+    background-color: #000000;     /* Wikipedia - black background on hover */
+}
+
+/* Accessibility: Add focus styles for keyboard navigation */
+.social-icon:focus {
+    outline: 2px solid #ffcc00;    /* Highlight icons when focused */
+    outline-offset: 2px;
+}
+html {
+    scroll-padding-top: 100px;
+  }
+  body {
+      font-family: Arial, sans-serif;
+  }
+  .navbar-nav .nav-link {
+      font-weight: bold;
+      transition: color 0.3s ease;
+      color: #ccc;
+  }
+  .navbar-nav .nav-link:hover {
+      text-decoration: none;
+      background-color: #f15b2a;
+      border-radius: 15px;
+  }
+  ul li {
+      margin-right: 50px;
+  }
+  #navbarNav .nav-item {
+      display: flex;
+      justify-content: center;
+  }
+  header {
+      font-size: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+  }
+  .hero {
+    padding: 100px 0;
+}
+.hero .display-4 {
+    font-family: stencil;
+    font-weight: bold;
+    color: #ffffff;
+    padding-top: 30px;
+}
+.hero .year {
+    font-size: 50px;
+    font-weight: bold;
+    color: #f988e0;
+}
+.hero .btn-primary {
+    font-weight: bold;
+    background-color: #f15b2a;
+    border: none;
+}
+.hero .btn-primary:hover{
+    color: #f15b2a;
+    background-color: #ffffff;
+}
+.about {
+    padding: 50px 20px;
+}
+.bg {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+p {
+    line-height: 1.8;
+    color: #d1d1d1;
+}
+#about {
+    background-color: rgba(247, 45, 170, 0.526);
+    color: rgb(78, 245, 78);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+    border-radius: 40px;
+}
+#schedule {
+    background-color: #8FA28D;
+    font-family: Arial, sans-serif;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.schedule-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0 0 20px;
+    color: #333;
+}
+.schedule-card {
+    background-color: #fffbfb;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+}
+.schedule-card:hover {
+    box-shadow: 25px 25px 12px rgba(0, 0, 0, 0.404);
+}
+.schedule-card h5 {
+    color: #333;
+}
+.schedule-card strong{
+    color: #613d3d;
+}
+.schedule-card strong:hover{
+    text-decoration: none;
+    color: #610353ef;
+}
+.schedule-item {
+    font-size: 1rem;
+    color: #555;
+}
+/* Contact Section */
+#contact {
+    background-color: #1f2b3a;
+    color: #ffffff;
+    padding: 50px 0;
+}
+#contact h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+#contact h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#contact p {
+    font-size: 1rem;
+    margin: 0;
+}
+footer {
+    background-color: #111;
+    color: #ccc;
+    padding: 20px 0;
+}
+footer p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+footer .social-icons a {
+    font-size: 1.2rem;
+    color: #ccc;
+    transition: color 0.3s ease;
+    margin-right: 10px;
+}
+footer .social-icons a:hover {
+    color: #f15b2a;
+}
+
+#register {
+    border-radius: 15px;
+    width: 150px;
+}
+#SvitLogoBg {
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+}
+
+#SvitLogoBg img {
+width: 100%;
+max-width: 900px; /* Keep the logo from getting too large */
+height: auto;
+}
+
+@media (max-width: 767px) {
+#SvitLogoBg {
+padding: 10px;
+margin-top: 10px;
+}
+
+#SvitLogoBg img {
+max-width: 80%; /* Reduce size for smaller screens */
+margin: 0 auto;
+}
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 767px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-nav .nav-item {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    #navbarNav .navbar-toggler {
+        border-color: #f15b2a;
+    }
+    .hero .display-4 {
+        font-size: 36px;
+        padding-top: 20px;
+    }
+    .hero .year {
+        font-size: 30px;
+    }
+    #about, #schedule, #contact {
+        padding: 30px 15px;
+    }
+    .schedule-card {
+        width: 100%;
+    }
+    footer .social-icons a {
+        font-size: 1.5rem;
+        margin-right: 15px;
+    }
+}
+.container {
+    text-align: center;
+  }
+  
+  .schedule-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .schedule-card {
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .schedule-item {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  .clickable-word {
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .clickable-word:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+/* Popup Styles */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    z-index: 1000;
+  }
+  
+  .popup.hidden {
+    display: none;
+  }
+  
+  .popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .popup-image img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .popup-text {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .popup-text h2 {
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+  }
+  
+  .popup-text button {
+    font-weight: bold;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .popup-text button:hover {
+    color: #ffffff;
+    background-color: #610353ef;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    color: Red;
+  }  
