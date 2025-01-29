@@ -88,7 +88,7 @@ header {
     position: relative;
     top: -100px; /* Start position above the screen */
     opacity: 0;
-    animation: hoverDown 1.5s ease-out forwards;
+    animation: hoverDown 2.5s ease-out forwards;
 }
 
 @keyframes hoverDown {
