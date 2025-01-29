@@ -111,13 +111,11 @@ header {
     text-decoration: none;
     transition: 0.3s ease-in-out;
 }
-
 .about-btn:hover {
     background-color: black;
     color: #ff5e00;
     border: 3px solid #ff5e00;
 }
-
 .svit-logo {
     display: flex;
     justify-content: center;  /* Centers images horizontally */
@@ -125,13 +123,11 @@ header {
     gap: 20px;                /* Space between images */
     padding: 20px 0;
 }
-
 .svit-logo img {
     max-height: 200px;   /* Ensures all images have the same height */
     width: auto;        /* Keeps aspect ratio */
     object-fit: contain; /* Prevents stretching */
 }
-
 @keyframes hoverDown {
     0% {
         top: -100px;
