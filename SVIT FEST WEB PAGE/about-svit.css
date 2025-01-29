@@ -1,0 +1,231 @@
+/* General Page Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #f4f4f9; /* Light background */
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background: #0d2b45;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #f4d03f;
+    margin: 10px 0;
+}
+
+header nav a {
+    background: #f4d03f;
+    color: #0d2b45;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    background: #0d2b45;
+    color: #f4d03f;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#bg-video {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background: #f4d03f;
+    color: #0d2b45;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.hero .btn:hover {
+    background: #0d2b45;
+    color: #f4d03f;
+}
+
+/* History Section */
+.history {
+    padding: 40px 20px;
+    text-align: center;
+    background: #fff;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.event {
+    background: #f39c12;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    width: 23%;
+}
+
+.event .year {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Infrastructure Section */
+.infrastructure {
+    padding: 40px 20px;
+    background: #eaeaea;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Academic Excellence Section */
+.academics {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.academics ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.academics li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Student Life Section */
+.student-life {
+    padding: 40px 20px;
+    text-align: center;
+    background: #fff;
+}
+
+.events {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.event {
+    width: 30%;
+    text-align: center;
+}
+
+.event img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 40px 20px;
+    text-align: center;
+    background: #f39c12;
+}
+
+.testimonial-slider {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.testimonial {
+    max-width: 300px;
+    font-style: italic;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Call to Action Section */
+.cta {
+    text-align: center;
+    background: #0d2b45;
+    color: white;
+    padding: 40px;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta .btn {
+    background: #f4d03f;
+    color: #0d2b45;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.cta .btn:hover {
+    background: #0d2b45;
+    color: #f4d03f;
+}
