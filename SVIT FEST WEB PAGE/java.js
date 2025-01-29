@@ -16,7 +16,7 @@ function togglePopup(eventName = '') {
       const urlMap = {
           "Hackathon": "hackathon.html",
           "Code Marathon": "code-marathon.html",
-          "Vertex Tournament": "esports.html",
+          "E-Sports": "esports.html",
           "Paper Presentations": "paper-presentations.html",
           "Data Science Challenge": "data-science-challenge.html",
           "Web App Development": "web-app-development.html",

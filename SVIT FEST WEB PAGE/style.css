@@ -57,7 +57,7 @@ header {
     z-index: 1000;
 }
 .hero {
-    padding: 100px 0;
+    padding: 75px 0;
 }
 #event-title  { 
     font-family: 'Times New Roman', Times, serif;
@@ -70,13 +70,20 @@ header {
     color: #18a8cc;
 }
 .hero .btn-primary {
+    background-color: #ff5e00;  /* Same as your primary button */
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1em;
     font-weight: bold;
-    background-color: #f15b2a;
-    border: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
 }
-.hero .btn-primary:hover{
-    color: #f15b2a;
-    background-color: #ffffff;
+.btn-primary:hover{
+    color: #ff5e00;
+    background-color: black;
+    border: 3px solid #ff5e00;
 }
 .hero-container {
     position: relative;
@@ -92,6 +99,25 @@ header {
     text-align: center;
     overflow: hidden;
 }
+.about-btn {
+    display: inline-block;
+    background-color: #ff5e00;  /* Same as your primary button */
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.about-btn:hover {
+    background-color: black;
+    color: #ff5e00;
+    border: 3px solid #ff5e00;
+}
+
 .svit-logo {
     display: flex;
     justify-content: center;  /* Centers images horizontally */
