@@ -1,3 +1,10 @@
+@font-face {
+    font-family: myfont; /* Specify the name for your custom font */
+    src: url('./Fontstyles/chopsic/Chopsic.otf') format('opentype'); /* Define the font format */
+    font-weight: normal; /* Optionally specify weight */
+    font-style: normal;  /* Optionally specify style */
+}
+
 html {
     scroll-padding-top: 100px;
   }
@@ -33,10 +40,12 @@ html {
     padding: 100px 0;
 }
 .hero .display-4 {
-    font-family: stencil;
     font-weight: bold;
     color: #ffffff;
     padding-top: 30px;
+}
+.hero .display-4 h1 {
+    font-family: myfont;
 }
 .hero .year {
     font-size: 50px;
@@ -379,3 +388,92 @@ margin: 0 auto;
     outline: 2px solid #ffcc00;    /* Highlight icons when focused */
     outline-offset: 2px;
 }
+
+
+#hero-section {
+    background: #111;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+#hero-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.svit-logo {
+    margin-left: 75px;
+    max-width: 200px;
+    margin-bottom: 50px;
+}
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-hero h2 {
+    color: #ff5e00;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+.about-hero h3 {
+    color: #ff5e00;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+.about-hero p {
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.hero-container h1 {
+    font-size: 4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.year {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #00ccff;
+}
+.btn-primary {
+    background-color: #ff5e00;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fffefe;  /* Dark grey text */
+    text-transform: uppercase;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #060606;
+}
+.btn-primary:hover {
+    border: 1px solid #fffefe;
+    color: #ff5e00;
+    background-color: #060606;
+}
+.event-details h2 {
+    color: #f99e27;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.event-details h3 {
+    color: #f99e27;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.event-details p {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.bi-check2-all {
+    font-size: 1.3em;
+    color: #ffcc00;
+    margin-right: 10px;
+}
+
