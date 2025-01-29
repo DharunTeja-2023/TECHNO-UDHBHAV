@@ -84,7 +84,6 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
 #hero-section {
     position: relative;
     background: #000;
@@ -117,6 +116,9 @@ header {
         opacity: 1;
     }
 }
+.container {
+    text-align: center;
+} 
 #schedule {
     background-color: #8FA28D;
     font-family: Arial, sans-serif;
@@ -131,28 +133,35 @@ header {
     color: #000000;
 }
 .schedule-card {
-    background-color: #fffbfb;
+    background-color: gray;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: box-shadow 0.3s ease;
 }
 .schedule-card:hover {
+    background-color: #e4d9d9;
     box-shadow: 25px 25px 12px rgba(0, 0, 0, 0.404);
+    border: 3px solid black;
 }
 .schedule-card h5 {
-    color: #333;
+    color: #2301e6;
 }
-.schedule-card strong{
-    color: #613d3d;
-}
-.schedule-card strong:hover{
-    text-decoration: none;
-    color: #610353ef;
-}
+.schedule-card {
+    padding: 15px;
+    border: 3px solid #ddd;
+    border-radius: 5px;
+} 
 .schedule-item {
     font-size: 1rem;
-    color: #555;
+    margin: 10px 0;
+}
+.clickable-word {
+    color: black;
+    cursor: pointer;
+}
+.clickable-word:hover {
+    color: #f84803;
 }
 /* Contact Section */
 #contact {
@@ -225,31 +234,7 @@ footer .social-icons a:hover {
         font-size: 1.5rem;
         margin-right: 15px;
     }
-}
-.container {
-    text-align: center;
 } 
-.schedule-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
-} 
-.schedule-card {
-    padding: 15px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-} 
-.schedule-item {
-    font-size: 1rem;
-    margin: 10px 0;
-}
-.clickable-word {
-    color: #007bff;
-    cursor: pointer;
-}
-.clickable-word:hover {
-    color: #610353ef;
-}
 /* Popup Styles */
 .popup {
     position: fixed;
