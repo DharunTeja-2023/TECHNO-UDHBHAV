@@ -1,56 +1,63 @@
 @font-face {
-    font-family: myfont; /* Specify the name for your custom font */
-    src: url('./Fontstyles/chopsic/Chopsic.otf') format('opentype'); /* Define the font format */
-    font-weight: normal; /* Optionally specify weight */
-    font-style: normal;  /* Optionally specify style */
+    font-family: 'font1';
+    src: url('./Fontstyles/chopsic/Chopsic.otf') format('opentype');
+    font-family: 'font2';
+    src: url('./Fontstyles/decaydence/Decaydence.otf')format('opentype');
+    font-family: 'font3';
+    src: url('./Fontstyles/decaydence/Decaydence\ Straight.otf')format('opentype');
+    font-family: 'font4';
+    src: url('./Fontstyles/godofwar/GODOFWAR.TTF')format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 html {
     scroll-padding-top: 100px;
-  }
-  body {
-      font-family: Arial, sans-serif;
-  }
-  .navbar-nav .nav-link {
-      font-weight: bold;
-      transition: color 0.3s ease;
-      color: #ccc;
-  }
-  .navbar-nav .nav-link:hover {
-      text-decoration: none;
-      background-color: #f15b2a;
-      border-radius: 15px;
-  }
-  ul li {
-      margin-right: 50px;
-  }
-  #navbarNav .nav-item {
-      display: flex;
-      justify-content: center;
-  }
-  header {
-      font-size: 20px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-  }
-  .hero {
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #ddd;
+}
+.navbar-nav .nav-link {
+    font-weight: bold;
+    transition: color 0.3s ease;
+    color: #ddd;
+}  
+.navbar-nav .nav-link:hover {
+    text-decoration: none;
+    background-color: #ff5e00;
+    border-radius: 15px;
+    color: #fff;
+}
+ul li {
+    margin-right: 50px;
+}
+#navbarNav .nav-item {
+    display: flex;
+    justify-content: center;
+}
+header {
+    font-size: 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    z-index: 1000;
+}
+.hero {
     padding: 100px 0;
 }
-.hero .display-4 {
+.hero h1 { 
     font-weight: bold;
     color: #ffffff;
     padding-top: 30px;
 }
-.hero .display-4 h1 {
-    font-family: myfont;
-}
 .hero .year {
     font-size: 50px;
     font-weight: bold;
-    color: #f988e0;
+    color: #88e2f9;
 }
 .hero .btn-primary {
     font-weight: bold;
@@ -61,28 +68,23 @@ html {
     color: #f15b2a;
     background-color: #ffffff;
 }
-.about {
-    padding: 50px 20px;
+.hero-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.bg {
-    background-color: rgba(0, 0, 0, 0.5);
+
+#hero-section {
+    position: relative;
+    background: #000;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    overflow: hidden;
 }
-h2 {
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-p {
-    line-height: 1.8;
-    color: #d1d1d1;
-}
-#about {
-    background-color: rgba(247, 45, 170, 0.526);
-    color: rgb(78, 245, 78);
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin-bottom: 50px;
-    border-radius: 40px;
+.svit-logo img {
+    max-width: 500px;
 }
 #schedule {
     background-color: #8FA28D;
@@ -95,7 +97,7 @@ p {
     font-weight: bold;
     font-size: 2rem;
     margin: 0 0 20px;
-    color: #333;
+    color: #000000;
 }
 .schedule-card {
     background-color: #fffbfb;
@@ -163,31 +165,6 @@ footer .social-icons a:hover {
     border-radius: 15px;
     width: 150px;
 }
-#SvitLogoBg {
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 20px;
-}
-
-#SvitLogoBg img {
-width: 100%;
-max-width: 900px; /* Keep the logo from getting too large */
-height: auto;
-}
-
-@media (max-width: 767px) {
-#SvitLogoBg {
-padding: 10px;
-margin-top: 10px;
-}
-
-#SvitLogoBg img {
-max-width: 80%; /* Reduce size for smaller screens */
-margin: 0 auto;
-}
-}
-
 /* Mobile Responsiveness */
 @media (max-width: 767px) {
     .navbar-nav {
@@ -220,34 +197,28 @@ margin: 0 auto;
 }
 .container {
     text-align: center;
-  }
-  
-  .schedule-title {
+} 
+.schedule-title {
     font-size: 2rem;
     margin-bottom: 20px;
-  }
-  
-  .schedule-card {
+} 
+.schedule-card {
     padding: 15px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
-  }
-  
-  .schedule-item {
+} 
+.schedule-item {
     font-size: 1rem;
     margin: 10px 0;
-  }
-  
-  .clickable-word {
+}
+.clickable-word {
     color: #007bff;
     cursor: pointer;
-  }
-  
-  .clickable-word:hover {
-    text-decoration: underline;
-    color: #0056b3;
-  }
+}
+.clickable-word:hover {
+    color: #610353ef;
+}
 /* Popup Styles */
 .popup {
     position: fixed;
@@ -260,36 +231,30 @@ margin: 0 auto;
     overflow: hidden;
     width: 300px;
     z-index: 1000;
-  }
-  
-  .popup.hidden {
+}
+.popup.hidden {
     display: none;
-  }
-  
-  .popup-content {
+}
+.popup-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-  }
-  
-  .popup-image img {
+}
+.popup-image img {
     width: 100%;
     height: auto;
     border-bottom: 1px solid #ddd;
-  }
-  
-  .popup-text {
+}
+.popup-text {
     text-align: center;
     margin-top: 10px;
-  }
-  
-  .popup-text h2 {
+}
+.popup-text h2 {
     font-size: 1.2rem;
     margin: 0 0 10px;
-  }
-  
-  .popup-text button {
+}
+.popup-text button {
     font-weight: bold;
     padding: 8px 16px;
     background-color: #007bff;
@@ -297,14 +262,12 @@ margin: 0 auto;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  .popup-text button:hover {
+}
+.popup-text button:hover {
     color: #ffffff;
     background-color: #610353ef;
-  }
-  
-  .close-button {
+}
+.close-button {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -312,130 +275,42 @@ margin: 0 auto;
     border: none;
     font-size: 1.2rem;
     cursor: pointer;
-  }
-  
-  .close-button:hover {
+}
+.close-button:hover {
     color: Red;
-  }  
-
-  /* General Footer Styling */
-.footer {
-    background-color: #363636;    /* Dark background color for footer */
-    color: #000000;                /* Light text color */
-    padding: 40px 0;               /* Vertical padding for footer */
-    text-align: center;            /* Center-align the content */
+}  
+#contact {
+    background-color: #1f2b3a;
+    color: #fff;
 }
-
-/* Footer Text Styling */
-.footer-text {
-    font-size: 1rem;               /* Font size for the footer text */
-    margin-bottom: 20px;           /* Add space below the paragraph */
-    line-height: 1.5;              /* Increase line height for better readability */
+footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 20px 0;
 }
-
-/* Social Icons Container */
-.social-icons {
-    display: flex;                 /* Flex layout for icons */
-    justify-content: center;       /* Center-align the icons horizontally */
-    gap: 20px;                     /* Space between the icons */
+.social-icons a {
+    font-size: 1.5rem;
+    color: #ddd;
+    transition: color 0.3s ease;
 }
-
-/* Individual Icon Styling */
-.social-icon {
-    font-size: 2rem;  
-    font-weight: bold;             /* Icon size */
-    color: #f4f4f4;                /* Default color for icons */
-    text-decoration: none;         /* Remove underline from links */
-    padding: 5px 5px;                 /* Add padding around icons */
-    border: 2px solid transparent; /* Transparent border for initial state */
-    border-radius: 8px;            /* Slight rounded corners for square border */
-    transition: all 0.3s ease;     /* Smooth transition for hover effects */
-    display: inline-block;         /* Ensure icons remain inline with the text */
-}
-
-/* Hover Effect for Icons */
-.social-icon.social-icon.facebook:hover {
-    color: #3b5998;                /* Change icon color to white on hover */
-    background-color: #000000;     /* Facebook - blue background on hover */
-    transform: scale(1.1);          /* Slight zoom effect on hover */
-}
-
-/* Specific Icon Colors */
-.social-icon.facebook {
-    color: #3b5998;                /* Facebook icon color */
-}
-
-.social-icon.instagram {
-    color: #e4405f;                /* Instagram icon color */
-}
-
-.social-icon.wikipedia {
-    color: #000000;                /* Wikipedia icon color */
-}
-
-/* Hover Colors for Other Icons */
-
-.social-icon.instagram:hover {
-    background-color: #000000;     /* Instagram - pink background on hover */
-}
-
-.social-icon.wikipedia:hover {
-    background-color: #000000;     /* Wikipedia - black background on hover */
-}
-
-/* Accessibility: Add focus styles for keyboard navigation */
-.social-icon:focus {
-    outline: 2px solid #ffcc00;    /* Highlight icons when focused */
-    outline-offset: 2px;
-}
-
-
-#hero-section {
-    background: #111;
-    color: white;
-    padding: 60px 0;
-    text-align: center;
-}
-#hero-section .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.svit-logo {
-    margin-left: 75px;
-    max-width: 200px;
-    margin-bottom: 50px;
-}
-.hero-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.about-hero h2 {
+.social-icons a:hover {
     color: #ff5e00;
-    font-size: 1.8em;
-    margin-bottom: 15px;
 }
-.about-hero h3 {
+.about-hero, .event-details {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+.about-hero h2, .event-details h2 {
     color: #ff5e00;
-    font-size: 1.8em;
-    margin-bottom: 15px;
 }
-.about-hero p {
-    font-size: 1.1em;
-    font-weight: bold;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-.hero-container h1 {
-    font-size: 4em;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-.year {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #00ccff;
+.bi-check2-all {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: #ffcc00;
 }
 .btn-primary {
     background-color: #ff5e00;
@@ -443,37 +318,13 @@ margin: 0 auto;
     padding: 15px 30px;
     font-size: 1.2em;
     font-weight: bold;
-    color: #fffefe;  /* Dark grey text */
-    text-transform: uppercase;
-    margin-top: 20px;
+    color: #fff;
     border-radius: 5px;
-    border: 1px solid #060606;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
 }
 .btn-primary:hover {
-    border: 1px solid #fffefe;
+    background-color: #fff;
     color: #ff5e00;
-    background-color: #060606;
-}
-.event-details h2 {
-    color: #f99e27;
-    font-weight: bold;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-.event-details h3 {
-    color: #f99e27;
-    font-weight: bold;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-.event-details p {
-    font-size: 1.1em;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-.bi-check2-all {
-    font-size: 1.3em;
-    color: #ffcc00;
-    margin-right: 10px;
 }
 
