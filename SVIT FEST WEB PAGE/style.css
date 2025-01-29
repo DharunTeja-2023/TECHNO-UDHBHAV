@@ -1,14 +1,24 @@
 @font-face {
     font-family: 'font1';
     src: url('./Fontstyles/chopsic/Chopsic.otf') format('opentype');
-    font-family: 'font2';
-    src: url('./Fontstyles/decaydence/Decaydence.otf')format('opentype');
-    font-family: 'font3';
-    src: url('./Fontstyles/decaydence/Decaydence\ Straight.otf')format('opentype');
-    font-family: 'font4';
-    src: url('./Fontstyles/godofwar/GODOFWAR.TTF')format('opentype');
+
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'font2';
+    src: url('./Fontstyles/decaydence/Decaydence.otf')format('opentype');
+}
+
+@font-face {
+    font-family: 'font3';
+    src: url('./Fontstyles/decaydence/Decaydence\ Straight.otf')format('opentype');
+}
+
+@font-face {
+    font-family: 'font4';
+    src: url('./Fontstyles/godofwar/GODOFWAR.TTF')format('opentype');
 }
 
 html {
@@ -50,7 +60,7 @@ header {
     padding: 100px 0;
 }
 #event-title  { 
-    font-family: 'font1';
+    font-family: 'font4';
     font-weight: bold;
     color: #ffffff;
     padding-top: 30px;
@@ -58,7 +68,7 @@ header {
 .hero .year {
     font-size: 50px;
     font-weight: bold;
-    color: #88e2f9;
+    color: #18a8cc;
 }
 .hero .btn-primary {
     font-weight: bold;
@@ -226,8 +236,7 @@ footer .social-icons a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #000;
-    background-color: #fff;
+    background-color: #aaaaaa;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     overflow: hidden;
@@ -249,6 +258,7 @@ footer .social-icons a:hover {
     border-bottom: 1px solid #ddd;
 }
 .popup-text {
+    color: #000;
     text-align: center;
     margin-top: 10px;
 }
@@ -272,13 +282,13 @@ footer .social-icons a:hover {
 }
 .close-button {
     position: absolute;
-    font-size: 1rem;
-    font-weight: bold;
-    top: 1px;
-    right: 10px;
+    top: 0;
+    right: 0;
     background: none;
     border: none;
     font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1rem;
     cursor: pointer;
 }
 .close-button:hover {
@@ -332,4 +342,12 @@ footer {
     background-color: #fff;
     color: #ff5e00;
 }
-
+/* Full-Screen Canvas for Animation */
+#backgroundCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Send to background */
+}
