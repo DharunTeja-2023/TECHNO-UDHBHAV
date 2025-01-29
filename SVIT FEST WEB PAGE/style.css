@@ -60,8 +60,7 @@ header {
     padding: 100px 0;
 }
 #event-title  { 
-    font-family: 'font4';
-    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
     color: #ffffff;
     padding-top: 30px;
 }
@@ -94,11 +93,18 @@ header {
     text-align: center;
     overflow: hidden;
 }
-.svit-logo img{
-    position: relative;
-    top: -100px; /* Start position above the screen */
-    opacity: 0;
-    animation: hoverDown 2.5s ease-out forwards;
+.svit-logo {
+    display: flex;
+    justify-content: center;  /* Centers images horizontally */
+    align-items: center;      /* Aligns images to the same height */
+    gap: 20px;                /* Space between images */
+    padding: 20px 0;
+}
+
+.svit-logo img {
+    max-height: 200px;   /* Ensures all images have the same height */
+    width: auto;        /* Keeps aspect ratio */
+    object-fit: contain; /* Prevents stretching */
 }
 
 @keyframes hoverDown {
