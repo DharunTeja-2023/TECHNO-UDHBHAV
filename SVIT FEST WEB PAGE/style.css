@@ -94,8 +94,22 @@ header {
     text-align: center;
     overflow: hidden;
 }
-.svit-logo img {
-    max-width: 900px;
+.svit-logo img{
+    position: relative;
+    top: -100px; /* Start position above the screen */
+    opacity: 0;
+    animation: hoverDown 2.5s ease-out forwards;
+}
+
+@keyframes hoverDown {
+    0% {
+        top: -100px;
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
 }
 #schedule {
     background-color: #8FA28D;
