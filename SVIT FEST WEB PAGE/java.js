@@ -29,6 +29,20 @@ function togglePopup(eventName = '') {
       window.location.href = targetURL;
   }
 
+  function togglePopup(eventName, imageUrl) {
+    const popup = document.getElementById("popup");
+    const popupHeading = document.getElementById("popup-heading");
+    const popupImage = document.getElementById("popup-img");
+
+    if (popup.classList.contains("hidden")) {
+        popupHeading.textContent = eventName;
+        popupImage.src = imageUrl;
+        popupImage.alt = eventName;
+        popup.classList.remove("hidden");
+    } else {
+        popup.classList.add("hidden");
+    }
+}
 
 
 
@@ -72,7 +86,5 @@ function togglePopup(eventName = '') {
         content.innerHTML = sections[section].content;
     }
 }
-
-
 
         
