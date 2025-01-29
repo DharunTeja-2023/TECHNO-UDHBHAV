@@ -226,6 +226,7 @@ footer .social-icons a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: #000;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
@@ -252,6 +253,7 @@ footer .social-icons a:hover {
     margin-top: 10px;
 }
 .popup-text h2 {
+    font-weight: bold;
     font-size: 1.2rem;
     margin: 0 0 10px;
 }
@@ -270,7 +272,9 @@ footer .social-icons a:hover {
 }
 .close-button {
     position: absolute;
-    top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    top: 1px;
     right: 10px;
     background: none;
     border: none;
