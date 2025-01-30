@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB APP DEVELOPMENT</title>
     <link rel="stylesheet" href="common.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body> 
     <!-- Animated Background -->
@@ -55,10 +56,11 @@
         </div>
     </div>
 
-    <!-- Registration Button -->
-<div class="btn-wrapper">
-    <a href="#register" class="btn-register">Register Now</a>
-</div>
+    <!-- Button Wrapper for Rules Download & Register -->
+    <div class="btn-wrapper">
+        <button class="btn-rules" onclick="downloadPDF('Web App Development')">Download Rules (PDF)</button>
+        <a href="#" class="btn-register">Register Now</a>
+    </div>
 
 
     <!-- JavaScript -->

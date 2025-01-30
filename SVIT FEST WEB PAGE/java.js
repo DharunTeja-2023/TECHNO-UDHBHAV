@@ -1,120 +1,74 @@
-let selectedEvent = "Hackathon"; // Default event set to Hackathon
+let selectedEvent = ""; // Default event set to Hackathon
 
 // Function to set selected event
 function setSelectedEvent(eventName) {
     selectedEvent = eventName;
 }
 
-// Function to update the info-box with event-specific data
+// Function to update the info-box when a navbar item is clicked
 function showSection(section) {
     const title = document.getElementById("info-title");
     const content = document.getElementById("info-content");
 
-    // Event-specific details
-    const eventDetails = {
-        "Hackathon": {
-            "eligibility": "Open to all college students.",
-            "event": "Hackathon 2025 is a coding competition where participants build innovative software projects.",
-            "topics": "AI, Blockchain, Web Development, Cybersecurity.",
-            "register": "Registration is ₹600 per head. Deadline: 25th Feb 2025.",
-            "venue": "SVIT Campus, Hyderabad.",
-            "contact": "Contact: John Doe (+91 1234567890)"
-        },
-        "Code Marathon": {
-            "eligibility": "Only undergraduate students can participate.",
-            "event": "Code Marathon is a 5-hour nonstop coding challenge.",
-            "topics": "Competitive Programming, Data Structures & Algorithms.",
-            "register": "₹500 per participant. Registration closes on 20th Feb 2025.",
-            "venue": "SVIT Auditorium, Hyderabad.",
-            "contact": "Contact: Jane Doe (+91 9876543210)"
-        },
-        "Web App Development": {
-            "eligibility": "Anyone passionate about web development.",
-            "event": "Teams of 3-5 will build a full-stack web application in 48 hours.",
-            "topics": "React, Node.js, Firebase, Tailwind CSS.",
-            "register": "₹800 per team. Last date: 22nd Feb 2025.",
-            "venue": "SVIT Hall A3.",
-            "contact": "Contact: Sarah (+91 9191919191)"
-        }
+    // Define the information for each section
+    const infoData = {
+        "eligibility": "Eligibility: Open to all students across various colleges.",
+        "topics": "Topics: AI, Cybersecurity, Blockchain, Web Development, and more.",
+        "event": "Event Details: A grand competition where students showcase their technical skills.",
+        "register": "Registration Fee: ₹500 per participant. Deadline: 25th Feb 2025.",
+        "venue": "Venue: SVIT Campus, Hyderabad.",
+        "contact": "Contact: Event Coordinator (+91 9876543210)"
     };
 
-    // If no event is selected, show default message
-    if (!selectedEvent || !eventDetails[selectedEvent]) {
-        title.textContent = "Information";
-        content.innerHTML = "Please select an event first.";
-        return;
-    }
-
-    // Check if section exists for the selected event
-    if (eventDetails[selectedEvent][section]) {
+    // Update info-box content
+    if (infoData[section]) {
         title.textContent = section.charAt(0).toUpperCase() + section.slice(1);
-        content.innerHTML = eventDetails[selectedEvent][section];
+        content.innerHTML = infoData[section];
     } else {
         title.textContent = "Information";
-        content.innerHTML = "Details not available for this section.";
+        content.innerHTML = "Details not available.";
     }
 }
 
-// Attach event listeners to navigation links
+// Attach event listeners to navbar items
 document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll("nav a");
+    const navLinks = document.querySelectorAll(".nav-link");
 
-    navLinks.forEach((link) => {
+    navLinks.forEach(link => {
         link.addEventListener("click", function (event) {
-            event.preventDefault(); // Prevent page reload
-            const section = this.getAttribute("onclick").match(/'([^']+)'/)[1]; // Extract section name
-            showSection(section);
+            event.preventDefault(); // Prevent default page reload
+
+            // Get the section to show from the clicked button's data attribute
+            const section = this.getAttribute("data-section");
+            if (section) {
+                showSection(section);
+            }
         });
     });
 });
 
 
-function togglePopup(eventName = '') {
-    const popup = document.getElementById('popup');
-    const heading = document.getElementById('popup-heading');
-    if (eventName) {
-      heading.innerText = eventName;
-    }
-    popup.classList.toggle('hidden');
-  }
-
-  function navigateToNextPage() {
-    window.location.href = "nextpage.html"; // Replace with your target URL
-  }
-
-  function navigateToNextPage() {
-      const eventName = document.getElementById('popup-heading').innerText;
-      const urlMap = {
-          "Hackathon": "hackathon.html",
-          "Code Marathon": "code-marathon.html",
-          "E-Sports": "esports.html",
-          "Paper Presentations": "paper-presentations.html",
-          "Data Science Challenge": "data-science-challenge.html",
-          "Web App Development": "web-app-development.html",
-          "Project Expo": "project-expo.html",
-          "Tech Talk": "tech-talk.html",
-          "Logo Quiz": "logo-quiz.html"
-      };
-      
-      const targetURL = urlMap[eventName] || "404.html"; // Fallback to a 404 page if event is not found
-      window.location.href = targetURL;
-  }
-
-  function togglePopup(eventName, imageUrl) {
+Document.addEventListener("DOMContentLoaded", () => {
+    const eventNames = document.querySelectorAll(".event-name");
     const popup = document.getElementById("popup");
-    const popupHeading = document.getElementById("popup-heading");
-    const popupImage = document.getElementById("popup-img");
+    const popupImg = document.getElementById("popup-img");
 
-    if (popup.classList.contains("hidden")) {
-        popupHeading.textContent = eventName;
-        popupImage.src = imageUrl;
-        popupImage.alt = eventName;
-        popup.classList.remove("hidden");
-    } else {
-        popup.classList.add("hidden");
-    }
-}
+    eventNames.forEach(event => {
+        event.addEventListener("mouseenter", (e) => {
+            const imgSrc = e.target.getAttribute("data-image");
+            popupImg.src = imgSrc;
+            popup.style.display = "block";
 
+            // Position popup near the event name
+            popup.style.top = `${e.target.offsetTop + 20}px`;
+            popup.style.left = `${e.target.offsetLeft + 150}px`;
+        });
+
+        event.addEventListener("mouseleave", () => {
+            popup.style.display = "none";
+        });
+    });
+});
 // Function to download the event rules as a PDF
 function downloadPDF(eventName) {
     const { jsPDF } = window.jspdf;
@@ -129,6 +83,48 @@ function downloadPDF(eventName) {
             "Submit all code and presentations before the deadline."
         ],
         "Code Marathon": [
+            "Only undergraduate students can participate.",
+            "Code must be written in the provided time frame.",
+            "Use of external libraries is allowed only if specified.",
+            "No collaboration between participants during the event."
+        ],
+        "E-Sports": [
+            "Only undergraduate students can participate.",
+            "Code must be written in the provided time frame.",
+            "Use of external libraries is allowed only if specified.",
+            "No collaboration between participants during the event."
+        ],
+        "Paper Presentations": [
+            "Only undergraduate students can participate.",
+            "Code must be written in the provided time frame.",
+            "Use of external libraries is allowed only if specified.",
+            "No collaboration between participants during the event."
+        ],
+        "Data Science Challenge": [
+            "Only undergraduate students can participate.",
+            "Code must be written in the provided time frame.",
+            "Use of external libraries is allowed only if specified.",
+            "No collaboration between participants during the event."
+        ],
+        "Web App Development": [
+            "Only undergraduate students can participate.",
+            "Code must be written in the provided time frame.",
+            "Use of external libraries is allowed only if specified.",
+            "No collaboration between participants during the event."
+        ],
+        "Project Expo": [
+            "Only undergraduate students can participate.",
+            "Code must be written in the provided time frame.",
+            "Use of external libraries is allowed only if specified.",
+            "No collaboration between participants during the event."
+        ],
+        "Tech Talk": [
+            "Only undergraduate students can participate.",
+            "Code must be written in the provided time frame.",
+            "Use of external libraries is allowed only if specified.",
+            "No collaboration between participants during the event."
+        ],
+        "Logo Quiz": [
             "Only undergraduate students can participate.",
             "Code must be written in the provided time frame.",
             "Use of external libraries is allowed only if specified.",

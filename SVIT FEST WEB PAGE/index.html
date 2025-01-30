@@ -38,7 +38,7 @@
         <!-- SVIT Logo -->
         <div class="svit-logo">
             <img src="./images/Celebrations logo.png" alt="20 years of celebrations logo">
-            <img  src="./images/mainlogo.png" alt="SVIT title Logo">
+            <img src="./images/mainlogo.png" alt="SVIT title Logo">
             <img src="./images/NAAC-Logo.webp" alt="naac a grade accredation logo">
         </div>
 
@@ -47,8 +47,8 @@
             <!-- First Column: About Information -->
             <div class="col-md-4 text-start about-hero">
                 <h2>ABOUT THE COLLEGE</h2>
-                <p>Swami Vivekananda Institute of Technology (SVIT) offers quality education in engineering and technology. It fosters innovation and skill development to shape future-ready professionals.</p>
-                <a href="./about-svit.html" class="btn about-btn">Learn More</a>
+                <p>Swami Vivekananda Institute of Technology (SVIT) is a premier institution dedicated to excellence in engineering and technology education. With a strong emphasis on innovation and skill development, SVIT prepares students to meet industry challenges. The college offers state-of-the-art infrastructure, experienced faculty, and a vibrant learning environment.</p>
+                <a href="https://svit.ac.in/gallery.html" class="btn about-btn">Know More</a>
             </div>
 
             <!-- Second Column: Event Title -->
@@ -57,7 +57,7 @@
                   TECHNO<br>
                   UDHBHAV
                 </h1>
-                <h3 class="year">
+                <h3 id="event-year">
                     2<br>
                     0<br>
                     2<br>
@@ -67,83 +67,46 @@
             </div>
 
             <!-- Third Column: Where & When Information -->
-            <div class="col-md-4 text-start event-details">
-                <h2>ABOUT THE EVENT</h2>
-                <p>Techno Udbhav, the annual tech fest of SVIT, brings together students for coding, robotics, and more. It is a hub for learning, networking, and showcasing talent.</p>
-                <h3>Where</h3>
-                <p><span class="text-warning bi-check2-all"></span> SVIT Campus</p>
-                <h3>When</h3>
-                <p><span class="text-warning bi-check2-all"></span> 28th Feb & 1st March 2025</p>
+            <div class="col-md-4 text-start event-details" id="about-event">
+                <div>
+                    <h2>ABOUT THE EVENT</h2>
+                    <p>Techno Udbhav, the annual tech fest of SVIT, brings together students for coding, robotics, and more. It is a hub for learning, networking, and showcasing talent.</p>
+                </div>
+                <div>
+                    <h3>Where</h3>
+                    <p><span class="text-warning bi-check2-all"></span> SVIT Campus</p>
+                </div>
+                <div>
+                    <h3>When</h3>
+                    <p><span class="text-warning bi-check2-all"></span> 28th Feb & 1st March 2025</p>
+                </div>
+                
             </div>
 
         </div>
     </div>
 </section>
-
-
-
         <!-- Schedule Section -->
         <section id="schedule">
-            <div class="container">
-                <div class="d-flex justify-content-center">
-                    <h2 class="schedule-title">SCHEDULE</h2>
+            <h2>SCHEDULE</h2>
+            <div>
+                <div class="schedule-card">
+                    <h3>28th FEBRUARY</h3>
+                    <a href="./hackathon.html">Hackathon</a>
+                    <a href="./code-marathon.html">Code Marathon</a>
+                    <a href="./esports.html">E-Sports</a>
+                    <a href="./paper-presentations.html">Paper Presentations</a>
+                    <a href="./data-science-challenge.html">Data Science Challenge</a>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-5 m-3">
-                        <div class="schedule-card">
-                            <h5><b>28th FEBRUARY</b></h5>
-                            <p class="schedule-item">
-                                <strong><span class="clickable-word" onclick="togglePopup('Hackathon', './images caurasoule/hackathon.jpg')">Hackathon</span></strong>
-                            </p>
-                            <p class="schedule-item">
-                                <strong><span class="clickable-word" onclick="togglePopup('Code Marathon', './images caurasoule/Codingsession.jpg')">Code Marathon</span></strong>
-                            </p>
-                            <p class="schedule-item">
-                                <strong><span class="clickable-word" onclick="togglePopup('E-Sports', './images caurasoule/temadiscusiion.jpg')">E-Sports</span></strong>
-                            </p>
-                            <p class="schedule-item">
-                                <strong><span class="clickable-word" onclick="togglePopup('Paper Presentations', './images caurasoule/Codingsession.jpg')">Paper Presentations</span></strong>
-                            </p>
-                            <p class="schedule-item">
-                                <strong><span class="clickable-word" onclick="togglePopup('Data Science Challenge', './images caurasoule/Codingsession.jpg')">Data Science Challenge</span></strong>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-5 m-3">
-                        <div class="schedule-card">
-                            <h5><b>1st MARCH</b></h5>
-                            <p class="schedule-item">
-                                <strong><span class="clickable-word" onclick="togglePopup('Web App Development', './images caurasoule/Codingsession.jpg')">Web App Development</span></strong>
-                            </p>
-                            <p class="schedule-item">
-                                <strong><span class="clickable-word" onclick="togglePopup('Project Expo', './images caurasoule/Codingsession.jpg')">Project Expo</span></strong>
-                            </p>
-                            <p class="schedule-item">
-                                <strong><span class="clickable-word" onclick="togglePopup('Tech Talk', './images caurasoule/Codingsession.jpg')">Tech Talk</span></strong>
-                            </p>
-                            <p class="schedule-item">
-                                <strong><span class="clickable-word" onclick="togglePopup('Logo Quiz', './images caurasoule/Codingsession.jpg')">Logo Quiz</span></strong>
-                            </p>
-                        </div>
-                    </div>
+                <div class="schedule-card">
+                    <h3>1st MARCH</h3>
+                    <a href="./web-app-development.html">Web App Development</a>
+                    <a href="./project-expo.html">Project Expo</a>
+                    <a href="./tech-talk.html">Tech Talk</a>
+                    <a href="./logo-quiz.html">Logo Quiz</a>
                 </div>
             </div>
         </section>
-
-        
-        <!-- Popup -->
-        <div id="popup" class="popup hidden">
-            <div class="popup-content">
-                <div class="popup-image">
-                    <img id="popup-img" src="" alt="Event Image">
-                </div>
-                <div class="popup-text">
-                    <h2 id="popup-heading">Event Name</h2>
-                    <button onclick="navigateToNextPage()">To know More and Register</button>
-                </div>
-            </div>
-            <button class="close-button" onclick="togglePopup()">Close</button>
-        </div>
 
 
         <!-- Contact Section -->
@@ -179,7 +142,8 @@
 </footer>
 
     </div>
-    <script src="./background.js"></script>
+    
+    
     <Script src="./java.js"></Script>
 </body>
 </html>
