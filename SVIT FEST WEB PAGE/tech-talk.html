@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- Animated Background -->
-    <canvas id="backgroundCanvas"></canvas>
+    <video src=""></video>
 
     <header>
         <div id="AboutTechLogo">
@@ -47,19 +47,26 @@
     <!-- Speakers Section -->
     <div class="speakers">
         <div class="speaker" onclick="openPopup(0)">
-            <img src="./images/speaker1.jpg" alt="Speaker 1">
-            <h3>Dr. John Doe</h3>
-            <p>MIT</p>
+            <img src="./images/nks.png" alt="Speaker 1">
+            <div>
+                <h3>Dr. Nagender Kumar Suryadevara</h3>
+                <p>School of Engineering and Advanced Technology, Massey University</p>
+            </div>
+            
         </div>
         <div class="speaker" onclick="openPopup(1)">
             <img src="./images/speaker2.jpg" alt="Speaker 2">
-            <h3>Prof. Jane Smith</h3>
-            <p>Stanford University</p>
+            <div>
+                <h3>Prof. Jane Smith</h3>
+                <p>Stanford University</p>
+            </div>
         </div>
         <div class="speaker" onclick="openPopup(2)">
             <img src="./images/speaker3.jpg" alt="Speaker 3">
-            <h3>Dr. Alan Turing</h3>
-            <p>Cambridge University</p>
+            <div>
+                <h3>Dr. Alan Turing</h3>
+                <p>Cambridge University</p>
+            </div>
         </div>
     </div>
 
@@ -80,9 +87,9 @@
     <script>
         const speakers = [
             {
-                name: "Dr. John Doe",
-                institute: "MIT",
-                image: "./images/speaker1.jpg",
+                name: "Dr. Nagender Kumar Suryadevara",
+                institute: "School of Engineering and Advanced Technology, Massey University",
+                image: "./images/nks.png",
                 bio: "Dr. John Doe is a renowned AI researcher with 20 years of experience in machine learning and robotics."
             },
             {
@@ -101,6 +108,9 @@
 
         function openPopup(index) {
             const speaker = speakers[index];
+            if (index == 0) {
+                document.getElementById("popup-img").classList.add("nks");
+            }
             document.getElementById("popup-img").src = speaker.image;
             document.getElementById("popup-name").textContent = speaker.name;
             document.getElementById("popup-institute").textContent = speaker.institute;
