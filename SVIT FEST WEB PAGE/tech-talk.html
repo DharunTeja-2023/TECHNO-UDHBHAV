@@ -5,67 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TECH TALK</title>
     <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="techtalk.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
-<body> 
+<body>
     <!-- Animated Background -->
     <canvas id="backgroundCanvas"></canvas>
 
     <header>
-        <div>
-            <span id="AboutTechLogo">
-                <img src="./images/Celebrations logo.png" alt="20 yearsofCelebrationslogo" height="75">
-            </span>
+        <div id="AboutTechLogo">
+            <img src="./images/Celebrations logo.png" alt="20 yearsofCelebrationslogo" height="75">
         </div>
-        <h1>HTECH TALK</h1>
+        <h1>TECH TALK</h1>
         <a href="./index.html" class="home-button">Home</a>
     </header>
 
     <!-- Navigation Bar -->
     <nav>
         <ul>
-            <li><a href="#" onclick="showSection('eligibility')">Eligibility</a></li>
-            <li><a href="#" onclick="showSection('event')">Event Description</a></li>
-            <li><a href="#" onclick="showSection('topics')">Topics</a></li>
-            <li><a href="#" onclick="showSection('register')">Registration Details</a></li>
-            <li><a href="#" onclick="showSection('venue')">Venue</a></li>
-            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+            <li><a href="#">Eligibility</a></li>
+            <li><a href="#">Event Description</a></li>
+            <li><a href="#">Topics</a></li>
+            <li><a href="#">Registration Details</a></li>
+            <li><a href="#">Venue</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Permanent Info Box -->
+    <!-- Info Box -->
     <div id="info-box">
         <h2 id="info-title">Welcome</h2>
         <p id="info-content">Select a section from the navigation bar to view details here.</p>
     </div>
 
-    <!-- 5 Image Carousel at the bottom -->
-    <div class="carousel-container">
-        <div class="carousel-wrapper">
-            <img src="./images%20caurasoule/Teamdiscussion.webp" alt="Image 1">
-            <img src="./images%20caurasoule/technology.jpg" alt="Image 2">
-            <img src="./images%20caurasoule/Codingsession.jpg" alt="Image 3">
-            <img src="./images%20caurasoule/Analysis.jpeg" alt="Image 4">
-            <img src="./images%20caurasoule/hackathon.jpg" alt="Image 5">
-            <!-- Repeat images for continuous scrolling -->
-            <img src="./images%20caurasoule/Teamdiscussion.webp" alt="Image 1">
-            <img src="./images%20caurasoule/technology.jpg" alt="Image 2">
-            <img src="./images%20caurasoule/Codingsession.jpg" alt="Image 3">
-            <img src="./images%20caurasoule/Analysis.jpeg" alt="Image 4">
-            <img src="./images%20caurasoule/hackathon.jpg" alt="Image 5">
-        </div>
-    </div>
-
-    <!-- Button Wrapper for Rules Download & Register -->
+    <!-- Button Wrapper -->
     <div class="btn-wrapper">
         <button class="btn-rules" onclick="downloadPDF('Tech Talk')">Download Rules (PDF)</button>
         <a href="#" class="btn-register">Register Now</a>
     </div>
 
+    <!-- Speakers Section -->
+    <div class="speakers">
+        <div class="speaker" onclick="openPopup(0)">
+            <img src="./images/speaker1.jpg" alt="Speaker 1">
+            <h3>Dr. John Doe</h3>
+            <p>MIT</p>
+        </div>
+        <div class="speaker" onclick="openPopup(1)">
+            <img src="./images/speaker2.jpg" alt="Speaker 2">
+            <h3>Prof. Jane Smith</h3>
+            <p>Stanford University</p>
+        </div>
+        <div class="speaker" onclick="openPopup(2)">
+            <img src="./images/speaker3.jpg" alt="Speaker 3">
+            <h3>Dr. Alan Turing</h3>
+            <p>Cambridge University</p>
+        </div>
+    </div>
+
+    <!-- Popup for Speaker Details -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <img id="popup-img" src="" alt="Speaker Image">
+            <h2 id="popup-name"></h2>
+            <h4 id="popup-institute"></h4>
+            <p id="popup-bio"></p>
+        </div>
+    </div>
 
     <!-- JavaScript -->
-     <script src="background.js"></script>
+    <script src="background.js"></script>
     <script src="java.js"></script>
+    <script>
+        const speakers = [
+            {
+                name: "Dr. John Doe",
+                institute: "MIT",
+                image: "./images/speaker1.jpg",
+                bio: "Dr. John Doe is a renowned AI researcher with 20 years of experience in machine learning and robotics."
+            },
+            {
+                name: "Prof. Jane Smith",
+                institute: "Stanford University",
+                image: "./images/speaker2.jpg",
+                bio: "Prof. Jane Smith specializes in quantum computing and has published over 50 research papers in the field."
+            },
+            {
+                name: "Dr. Alan Turing",
+                institute: "Cambridge University",
+                image: "./images/speaker3.jpg",
+                bio: "Dr. Alan Turing, the father of modern computing, laid the foundation for artificial intelligence and cryptography."
+            }
+        ];
 
+        function openPopup(index) {
+            const speaker = speakers[index];
+            document.getElementById("popup-img").src = speaker.image;
+            document.getElementById("popup-name").textContent = speaker.name;
+            document.getElementById("popup-institute").textContent = speaker.institute;
+            document.getElementById("popup-bio").textContent = speaker.bio;
+            document.getElementById("popup").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 /* General Page Styling */
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,8 +8,18 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #0a0a1e; /* Dark, high-tech look */
+    background: #0a0a1e; /* Dark, high-tech look 
     color: white;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    overflow-x: hidden;
 }
 
 /* Header Styling */
@@ -206,13 +216,147 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
-/* Full-Screen Canvas for Animation */
-#backgroundCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1; /* Send to background */
+/* Tablet View (max-width: 1024px) */
+@media (max-width: 1024px) {
+    header {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Reduce font size for better fit */
+    }
+
+    #AboutTechLogo {
+        left: 30px; /* Adjust logo position */
+    }
+
+    #AboutTechLogo img {
+        height: 60px; /* Reduce logo size */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row; /* Keep items in a row */
+        justify-content: center; /* Center the navbar */
+        align-items: center;
+        flex-wrap: wrap; /* Allow wrapping if needed */
+        gap: 15px; /* Space between items */
+    }
+
+    nav ul li a {
+        font-size: 0.9rem; /* Adjust font size for better fit */
+        padding: 8px 15px; /* Reduce padding */
+        white-space: nowrap; /* Prevent text from breaking */
+    }
+
+    #info-box {
+        width: 80%; /* Reduce width for better layout */
+        max-width: none;
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .btn-wrapper {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .carousel-container {
+        bottom: 20px;
+    }
+
+    .carousel-container img {
+        max-width: 180px; /* Reduce image size */
+    }
+
+    .btn-wrapper {
+        display: flex;
+        flex-direction: row; /* Keep buttons in a row */
+        justify-content: center; /* Center them */
+        align-items: center;
+        gap: 10px; /* Reduce spacing between buttons */
+        flex-wrap: wrap; /* Allow wrapping if needed */
+    }
+
+    .btn-rules, .btn-register {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile View (max-width: 767px) */
+@media (max-width: 767px) {
+    header {
+        padding: 10px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reduce heading size */
+    }
+
+    #AboutTechLogo {
+        position: static; /* Center the logo */
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    #AboutTechLogo img {
+        height: 50px; /* Further reduce logo size */
+    }
+
+    .home-button {
+        position: static;
+        display: block;
+        text-align: center;
+        margin: 10px auto;
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    nav {
+        padding: 10px; /* Reduce padding for compact layout */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row; /* Keep navbar links in a row */
+        justify-content: center; /* Center align */
+        align-items: center;
+        flex-wrap: wrap; /* Allow wrapping on extra small screens */
+        gap: 10px; /* Adjust spacing */
+    }
+
+    nav ul li a {
+        font-size: 0.85rem; /* Slightly smaller text */
+        padding: 6px 10px; /* Reduce padding */
+        white-space: nowrap; /* Prevent text from breaking */
+    }
+
+
+    #info-box {
+        width: 95%; /* Make it more compact */
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .btn-wrapper {
+        display: flex;
+        flex-direction: row; /* Keep buttons in a row */
+        justify-content: center;
+        align-items: center;
+        gap: 8px; /* Reduce spacing further */
+        flex-wrap: wrap; /* Allows wrapping if screen is too small */
+    }
+
+    .btn-rules, .btn-register {
+        padding: 10px 20px; /* Adjust button size */
+        font-size: 0.9rem; /* Reduce text size slightly */
+        white-space: nowrap; /* Prevents text from breaking */
+    }
+
+    .carousel-container {
+        display: none; /* Hide carousel for mobile if space is limited */
+    }
 }
 
